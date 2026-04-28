@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6B2D3E;
+  --secondary: #2C3E50;
+  --accent: #FF5733; /* Safety Orange from Brand Guide */
+  --bg: #F4ECD8;
+  --text: #4A3728;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-libre), serif;
+}
+
+.font-body {
+  font-family: var(--font-lato), sans-serif;
+}
+
+.retro-border {
+  border: 1px solid #4A3728;
+}
+
+.thick-rule {
+  height: 4px;
+  background-color: #4A3728;
+  margin: 2rem 0;
+}
+
+.btn-primary {
+  @apply bg-[#6B2D3E] text-[#F4ECD8] px-8 py-3 rounded-[4px] font-bold transition-all hover:bg-[#2C3E50] disabled:opacity-50;
+}
+
+.btn-outline {
+  @apply border border-[#4A3728] text-[#4A3728] px-8 py-3 rounded-[4px] font-bold transition-all hover:bg-[#4A3728] hover:text-[#F4ECD8];
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4ECD8;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A3728;
+}
